@@ -638,7 +638,7 @@ void cStock::ApplyCircularTool(Point3D & p1, Point3D & p2, Point3D & cent, cSimT
 	{
 		Point3D cupCirc(xynorm.x * r, xynorm.y * r, 0);
 		float rotang = (float)SIM_WALK_RES / r;
-		int ndivs = (int)(3.1415926535 / rotang) + 1;
+		int ndivs = (int)(2 * 3.1415926535 / rotang) + 1;
 		if (!isCCW)
 			rotang = -rotang;
 		cupCirc.SetRotationAngleRad(rotang);
